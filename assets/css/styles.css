@@ -1,0 +1,567 @@
+body, html{
+	background-color: white;
+	color: #575757;
+	width: 100%;
+	height: 100%;
+	scroll-behavior: smooth;
+	font-family: nobel, sans-serif;
+	font-style: normal;
+	margin:0;
+    padding:0;
+}
+
+#netflix{
+	display:inline;
+}
+
+.typewriter p{
+   font-size: 18px;
+   font-style: bold;
+   font-family: nobel, sans-serif;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}
+
+
+#logo{
+	max-width:300%;
+    height:auto;	
+	margin-left: 6%; 
+
+}
+h1 {
+	font-family: nobel, sans-serif;
+	font-weight: 300;
+	font-style: normal;
+}
+
+p {
+	margin-top: 2%;
+	margin-bottom: 2%;
+	font-family: nobel, sans-serif;
+	font-weight: 300;
+	font-style: normal;
+	color: rgb(159, 33, 117);
+}
+
+a {
+	text-decoration: none;
+	color: #575757;
+	transition: 0.3s;
+}
+
+a:hover {
+	color: #8d8d8d;
+}
+
+.container {
+	display: flex; 
+	align-items: center; 
+	justify-content: center;
+	flex-wrap: wrap;
+	align-content: center;
+}
+
+
+.row {
+	flex-direction: row;
+}
+
+.column {
+	flex-direction: column;
+}
+
+.page-content {
+	width:100%;
+}
+
+/**Navbar**/
+#nav {
+	left: 0%;
+	right: 0%;
+	background-color: white;
+	position: fixed;
+	top: -70px;
+	display: block;
+	transition: top 0.4s;
+	box-shadow: 2px 2px 5px #aaaaaa;
+	z-index: 1;
+
+}
+
+.nav-item:first-child {
+	float: left;
+	font-weight: 500;
+}
+
+.nav-item {
+	color: #2a2d34;
+	float: right;
+	display: block;
+	text-align: center;
+	padding: 22px;
+	text-decoration: none;
+	font-size: 17px;
+	font-weight: 500;
+}
+
+.nav-item:hover {
+	color: #2a2d34;
+	transition: 0.5s;
+}
+
+
+.nav-item:hover:after {
+    transform: scaleX(1);
+}
+
+.nav-item::after {
+    display:block;
+    content: '';
+    border-bottom: solid 3px #d3cbf5;  
+    transform: scaleX(0);  
+    transition: 350ms ease-in-out;
+    transform-origin: 0% 50%;
+}
+
+
+/**Home**/
+#home-section {
+	height: 110vh;
+	margin-top: -10%;
+	display: flex; 
+	align-items: center; 
+	justify-content: center;
+	flex-wrap: wrap;
+	align-content: center;
+	background: radial-gradient(#fbd9e5, #e591c3);
+}
+#ex-section {
+	height: 100vh;
+	display: flex; 
+	align-items: center; 
+	justify-content: center;
+	flex-wrap: wrap;
+	align-content: center;
+}
+
+
+
+
+#landing-container {
+	/* padding-right: 10%; */
+}
+
+#landing-text {
+	/* max-width:100%; */
+	text-align: center;
+}
+
+.title {
+	max-width: 100%;
+	font-size: 350%;
+	margin-top: 5%;
+	margin-bottom: 2%;
+}
+
+.subtitle {
+	letter-spacing: 2px;
+	max-width: 100%;
+	font-size: 175%;
+}
+
+#app {
+	font-size:150%;
+}
+
+#profile-icon {
+	width: 500px;
+}
+
+.arrow {
+	border: solid black;
+	border-color: #575757;
+	border-width: 0 3px 3px 0;
+	display: inline-block;
+	padding: 10px;
+	transform: rotate(45deg);
+  	-webkit-transform: rotate(45deg);
+  	transition: 0.3s;
+  	animation: bounce 3s infinite;
+  	margin: 20px;
+}
+
+.arrow:hover {
+	-webkit-animation-play-state: paused;
+	opacity: 60%;
+	transform: scale(1.25) rotate(45deg);
+}
+
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0) rotate(45deg);
+  }
+  40% {
+    transform: translateY(-30px) rotate(45deg);
+  }
+  60% {
+    transform: translateY(-15px) rotate(45deg);
+  }
+}
+
+
+/**About**/
+
+#about-img {
+	height: 450px;
+	border-radius: 4px;
+	border-top: 20px solid #DBBDA6;
+	box-shadow: 12px 12px 1px #966C4C;
+	overflow-y:hidden;
+	margin: 40px;
+	margin-top: 20px;
+}
+
+#img-console {
+	width: 100%;
+}
+
+#about-section {
+	background-color: #F0F0F0;
+	padding: 50px;
+	min-height:75vh;
+}
+
+#console {
+	margin: 40px;
+	margin-top: 20px;
+	padding: 30px;
+	overflow-y:auto;
+	line-height: 22px;
+	height: 290px;
+	width: 550px;
+	font-size: 90%;
+	font-family: Monaco,monospace;
+	border-top: 20px solid #f8c8ea;
+	border-radius: 4px;
+	background-color: #2a2d34;
+	box-shadow: 12px 12px 1px #ea9fd8;
+}
+
+#console a {
+	text-decoration: underline;
+}
+.netflix{
+	width: 50%;
+	align-items: center;	
+}
+
+/* GLOBAL STYLES */
+body {
+  background: #333;
+  padding-top: 5em;
+  display: flex;
+  justify-content: center;
+}
+
+/* DEMO-SPECIFIC STYLES */
+.typewriter h1 {
+  color: #fff;
+  font-family: monospace;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3.0s steps(30, end),
+    blink-caret .5s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange }
+}
+
+.coffee{
+	width: 50%;
+	align-items: center;
+}
+.travel{
+	width: 70%;
+	align-items: center;
+	/* position: relative; */
+}
+
+.marathon{
+	width: 50%;
+	align-items: center;
+}
+ul { 
+	margin: 0; 
+	padding-left: 24px; 
+}
+
+.first-color {
+	color: #f0adc4;
+}
+.second-color {
+	color: #f874db;
+}
+
+.third-color {
+	color: #eb2e5e;
+}
+
+.fourth-color {
+	color: #fec6e8;
+}
+
+.fifth-color {
+	color: #ed7ba3;
+}
+
+.sixth-color{
+	color: rgb(255, 201, 241);
+}
+
+
+/**Education**/
+
+#text .subtitle {
+	margin-bottom:40px;
+}
+
+#education-section {
+	padding:50px;
+	padding-bottom: 80px;
+	min-height:100vh;
+	background-color: #C29A7B;
+}
+
+/* #text {
+	background-color: #474d5a;
+	padding-top:0px;
+} */
+
+/* .parallax {
+	background-image: linear-gradient(147deg, #FFFFFF 0%, #04619f 74%);
+  	min-height: 500px; 
+  	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+} */
+
+#education-section * {
+	color:white;
+}
+
+#education-title img {
+	width: 10%;
+}
+
+#school {
+	align-items: flex-start;
+}
+
+#school p {
+	font-size: 14px;
+}
+
+#school * {
+	margin: 8px;
+}
+
+#coursework {
+	align-items: flex-start;
+	font-size: 120%;
+}
+
+li {
+	margin: 5px;
+}
+
+ul {
+	list-style-type: circle;
+}
+
+#progress {
+	font-size: 80%;
+}
+
+/**Projects**/
+
+#project-section {
+	margin: 50px;
+}
+
+#button-section {
+	justify-content: center;
+	align-items: center;
+}
+
+.filter-button {
+	border: none;
+	outline: none;
+	padding: 12px 16px;
+	background-color: #f1f1f1;
+	cursor: pointer;
+	border-radius: 4px;
+	margin: 4px;
+	transition: 0.3s;
+}
+
+.filter-button:hover {
+	background-color: #ddd;
+}
+
+.filter-button.active {
+	background-color: #474d5a;
+	color: white;
+}
+
+.each-project {
+	position: relative;
+	height: 450px;
+	width: 450px;
+	margin: 4%;
+	display: none;
+}
+
+.show {
+	display: block;
+  }
+
+.proj-img {
+	width: 450px;
+	height: 450px;
+	border-radius: 6px;
+}
+
+
+.proj-description {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: #F8F8F8;
+	color: #fff;
+	visibility: hidden;
+	opacity: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: opacity .4s, visibility .4s;
+}
+
+.each-project:hover .proj-description {
+	visibility: visible;
+	opacity: 0.9;
+}
+
+.proj-description:hover {
+	opacity: 1;
+}
+
+.img-description {
+	transition: .5s;
+	color: #575757;
+	text-align: center;
+	margin-left: 25px;
+	margin-right: 25px;
+	padding-left: 25px;
+	padding-right: 25px;
+}
+
+.img-description i, .img-description p, .img-description a {
+	font-family: 'Lato', sans-serif;
+	text-decoration: none;
+	font-weight: 100;
+	line-height: 24px;
+}
+
+.img-description i {
+	font-size: 12px;
+}
+
+.img-description:hover {
+	opacity: 1;
+}
+
+h2{
+	/* font-family: cursive; */
+	font-family: nobel, sans-serif;
+}
+
+
+/**Footer**/
+
+#footer {
+	height: 8em;
+	text-align: center;
+	background-color: #ffe2fb;
+}
+
+#social-container * {
+	padding: 6px;
+	margin-bottom: 6px;
+}
+
+#social-container a {
+	color: #575757;
+	transition: .4s;
+}
+
+#social-container a:hover {
+	color: #8d8d8d;
+}
+
+#copyright {
+	color: #ee6ed2;
+	font-size:18px;
+}
+
+#copyright-1 {
+	color: #fd64dc;
+	font-size:20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
